@@ -1,0 +1,43 @@
+#include <stdio.h>
+int main() {
+    float a,b,area;
+    int operation;
+    printf("enter your choice of shape:\n");
+    printf("1.square \n 2.rectangle \n 3.circle \n 4.triangle  \n");
+    scanf("%d", &operation);
+    if(operation>4)
+    {
+        printf("should choose btw 1-4 dumbass!!!!");
+        return 0;
+    }
+    switch (operation) {
+        case 1:
+            printf("enter a side of the square\n");
+            scanf("%f ",&a);
+            area = a*a;
+            printf("Area of square: %.2f\n",area);
+            break;
+        case 2:
+            printf("enter 2 sides of the rectangle\n");
+            scanf("%f %f",&a,&b);
+            area = a*b;
+            printf("Area of rectangle: %.2f\n",area);
+            break;
+        case 3:
+            printf("enter raduis of the circle\n");
+            scanf("%f ",&a);
+            area = 3.14*a*a;
+            printf("Area of circle: %.2f\n",area);
+            break;
+        case 4:
+            printf("enter base and height of triangle\n");
+            scanf("%f %f ",&a,&b);
+            area = 0.5*a*b;
+            printf("Area of triangle: %.2f\n",area);
+            break;            
+        default:
+            printf("inout invalid sir!!\n");
+            break;
+    }
+    return 0;
+}
