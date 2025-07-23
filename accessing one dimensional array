@@ -1,0 +1,18 @@
+int main()
+{
+	int a[5]={2,25,41,52,82};
+	float b[3]={2.36,6.52,2.69};
+	char c[10]=“kanthraj”;
+	int i;
+	for(i=0;i<n;i++)
+	{
+		Printf(“%d\t”,a[i]);
+	}
+	Printf(“\n”);
+	For(i=0;i<3;i++)
+	{
+		Printf(“%f\t”,b[i]);
+	}
+	Printf(“\n %s “,c);
+	Return 0;
+}
