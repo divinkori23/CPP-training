@@ -1,0 +1,12 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    printf("hello\n");
+    printf("mrng\n");
+    goto a;
+    printf("gd mrng\n");
+    a:printf("hi!");
+    printf("coffee?\n");
+    return 0;
+}
