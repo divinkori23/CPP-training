@@ -1,0 +1,16 @@
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main(){
+    float x,y;
+    printf("enter X:");
+    scanf("%f",&x);
+    printf("enter Y:");
+    scanf("%f",&y);    
+    printf("for the given mathematical expression the answer is:");
+    float numerator = (sin(x)+cos(x));
+    float denominator = (tan(x));
+    float ans = (numerator/ denominator);
+    printf("%.2f",ans);
+    return 0;
+  }
