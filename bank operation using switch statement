@@ -1,0 +1,83 @@
+#include <stdio.h>
+int main() {
+    float curr_balance = 1000;
+    int pin = 1234;
+    int en_pin;
+    int operation;
+    float amt;
+
+    printf("Enter your PIN: ");
+    scanf("%d", &en_pin);
+
+    if (en_pin == pin) {
+        while (1)
+{
+     printf("\nChoose an operation:\n");
+     printf("1. Deposit\n2. Withdraw\n3. Balance Enquiry\n4.    Pin Change\n5. Exit\n");
+     scanf("%d", &operation);
+
+     if (operation > 5 || operation < 1) \
+{
+            printf("Choose between 1-5 only!\n");
+            continue;
+     }
+      switch (operation) {
+      case 1:
+             printf("Enter amount to deposit: ");
+             scanf("%f", &amt);
+             curr_balance += amt;
+             printf("New balance: %.2f\n", curr_balance);
+             break;
+
+      case 2:
+            printf("Enter amount to withdraw: ");
+            scanf("%f", &amt);
+            if (amt > curr_balance) 
+            {
+             printf("Insufficient funds!\n");
+            } 
+            else {
+                        curr_balance -= amt;
+                        printf("Withdrawn: %.2f\n", amt);
+                        printf("New balance: %.2f\n", curr_balance);
+                    }
+                    break;
+
+                case 3:
+                    printf("Current balance: %.2f\n", curr_balance);
+                    break;
+
+                case 4: {
+                    int old_pin, new_pin, new_pin_confirm;
+                    printf("Enter old PIN: ");
+                    scanf("%d", &old_pin);
+
+                    if (old_pin == pin) {
+                        printf("Enter new PIN: ");
+                        scanf("%d", &new_pin);
+                        printf("Re-enter new PIN: ");
+                        scanf("%d", &new_pin_confirm);
+
+                        if (new_pin == new_pin_confirm) {
+                            pin = new_pin;
+                            printf("PIN changed successfully! New PIN: %d\n", pin);
+                        } else {
+                            printf("New PINs do not match!\n");
+                        }
+                    } else {
+                        printf("Incorrect old PIN!\n");
+                    }
+                    break;
+                }
+                case 5:
+                    printf("Exiting... Goodbye!\n");
+                    return 0;
+                default:
+                    printf("Invalid input!\n");
+            }
+        }
+    } else {
+        printf("Incorrect PIN!\n");
+    }
+    return 0;
+}
