@@ -1,0 +1,47 @@
+
+#include<stdio.h>
+#include<stdlib.h>
+int main()
+{
+    int m,p,c,total;
+    float avg;
+    printf("enter you marks in mpc");
+    scanf("%d %d %d",&m,&p,&c);
+    total = m+p+c;
+    avg = total/3;
+    printf("your total marks is: %d ",total);
+    printf("your avg is:%f",avg);
+    if(avg>90 && avg<100)
+    {
+        printf("GRADE A+");
+    }
+    if(avg>80 && avg<90)
+    {
+        printf("GRADE A");
+    }
+    if(avg>70 && avg<80)
+    {
+        printf("GRADE B+");
+    }
+    if(avg>60 && avg<70)
+    {
+        printf("GRADE B");
+    }
+    if(avg>50 && avg<60)
+    {
+        printf("GRADE C");
+    }
+    if(avg>40 && avg<50)
+    {
+        printf("GRADE D");
+    }
+    if(avg>35 && avg<40)
+    {
+        printf("GRADE E");
+    }
+    if(avg<=35)
+    {
+        printf("FAIL!!");
+    }
+    return 0;
+}
