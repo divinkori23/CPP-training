@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    int number,largest_digit = 0,r,smallest_digit=9;
+    printf("Enter an integer: ");
+    scanf("%d", &number);
+    if (number == 0)
+    {
+        largest_digit = 0;
+        smallest_digit = 0;
+    } 
+    else 
+    {
+        while (number > 0) \
+        {
+            r = number % 10;
+            if (r > largest_digit) 
+             {
+                largest_digit = r; 
+             }
+            if(r < smallest_digit)
+             {
+                smallest_digit = r;
+             }
+            number = number/10; 
+        }
+    }
+    int sum = largest_digit+smallest_digit;
+    printf("The sum in the number is: %d\n",sum );
+    return 0;
+}
