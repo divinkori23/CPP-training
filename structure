@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main() {
+    struct A {
+        char eid[20];
+        int expi;
+        long long sal;
+        char name[20], dept[10];
+    } a;
+
+    printf("Enter your employee id, salary and experience:\n");
+    scanf("%s %lld %d", a.eid, &a.sal, &a.expi);
+
+    printf("--------------------------------\n");
+
+    printf("Enter the name and department:\n");
+    scanf("%s %s", a.name, a.dept);
+
+    printf("\n-------- EMPLOYEE DETAILS --------\n");
+    printf("ID       : %s\n", a.eid);
+    printf("Name     : %s\n", a.name);
+    printf("Dept     : %s\n", a.dept);
+    printf("Salary   : %lld\n", a.sal);
+    printf("Experience: %d years\n", a.expi);
+
+    return 0;
+}
