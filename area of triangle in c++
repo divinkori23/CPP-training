@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+float area(float b,float h)
+{
+     return 0.5*b*h;
+}
+int main() {
+    float b,h,y;
+    cout<<"enterr the base and height:"<<endl;
+    cin>>b>>h;
+    y=area(b,h);
+    cout<<y;
+    return 0;
+}
