@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+int fucn(int a,int b)
+{
+    if(a>b)
+        return a;
+    else
+        return b;
+        
+}
+int main() {
+    int a,b,t;
+    cout<<"enter 2 numbers"<<endl;
+    cin>>a>>b;
+    t=fucn(a,b);
+    cout<<"greatest is:"<<t;
+    return 0;
+}
