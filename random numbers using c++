@@ -1,0 +1,15 @@
+#include <iostream>
+#include <limits.h>  
+#include <time.h>    
+
+using namespace std;
+int gene() {
+    srand(time(0));
+    float x=(rand() % 10000)+1;
+    return x;
+}
+int main() {
+    int r= gene();
+    cout << "4-digit Random Number: " << r<< endl;
+    return 0;
+}
