@@ -1,0 +1,18 @@
+#include <iostream>
+using namespace std;
+
+int fucn(int num)
+{
+    int a = num%2;
+    char result[2][10] = {"Even", "Odd"};
+    cout << "The number is " << result[a] << endl;
+    return 0;
+}
+
+int main() {
+    int num;
+    cout << "Enter a number: ";
+    cin >> num;
+    fucn(num);
+    return 0;
+}
