@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int check(int a)
+{
+    if (a % 2 == 0) {
+        cout << "Number is even" << endl;
+        return 1;
+    } else {
+        cout << "Number is odd" << endl;
+        return 0;
+    }
+}
+
+int main() {
+    int a, t;
+    cout << "Enter a number:" << endl;
+    cin >> a;
+    t = check(a);
+    return 0;
+}
