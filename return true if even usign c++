@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+bool check(int a)
+{
+     if(a%2 ==0)
+            return true;
+     else
+            return false;
+}
+int main() {
+    float a,t;
+    cout<<"enter a:"<<endl;
+    cin>>a;
+    t=check(a);
+    cout<<t;
+    return 0;
+}
