@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int ori_pin = 8431;
+int balance = 10000;
+int amount;
+
+int withdraw(int pin)
+{
+    if (pin == ori_pin)
+    {
+        if (balance == 0)
+        {
+            cout << "Your bank balance is null. Please deposit to use it!" << endl;
+        }
+        else if (amount > balance)
+        {
+            cout << "Insufficient balance for this withdrawal!" << endl;
+        }
+        else
+        {
+                cout << "Enter the amount you want to withdraw:" << endl;
+    cin >> amount;
+            balance = balance - amount;
+            cout << "Withdrawn money is: " << amount << endl;
+            cout << "Current balance after withdrawal is: " << balance << endl;
+        }
+    }
+    else
+    {
+        cout << "Entered pin is incorrect!" << endl;
+    }
+    return 0;
+}
+
+int main()
+{
+    int pin, t;
+
+    cout << "Enter the pin:" << endl;
+    cin >> pin;
+    cout << "----------------------" << endl;
+
+
+    t = withdraw(pin);
+
+    return 0;
+}
