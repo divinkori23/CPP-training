@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int sarea(int l,int b)
+{
+     return l*b;
+}
+int main() {
+    float l,b,y;
+    cout<<"enterr the length and rectangle  of a side of the rect:"<<endl;
+    cin>>l>>b;
+    y=sarea(l,b);
+    cout<<y;
+    return 0;
+}
