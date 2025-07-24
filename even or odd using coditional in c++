@@ -1,0 +1,15 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+int cond(int a)
+{
+    (a%2==0)?cout<<"even":cout<<"odd";
+    return 0;
+}
+int main() {
+    int a,t;
+    cout<<"enter a number:"<<endl;
+    cin>>a;
+    t=cond(a);
+    return 0;
+}
