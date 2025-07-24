@@ -1,0 +1,19 @@
+// Online C++ compiler to run C++ program online
+#include <iostream>
+using namespace std;
+float swap(float &a,float &b)
+{
+    a = a + b; 
+    b = a - b; 
+    a = a - b;
+    return a,b;
+}
+int main() {
+    float a, b,t;
+    cout<<"Enter two integers: "<<endl;
+    cin>>a>>b;
+    cout<<"before swapping:a, b:  "<<a<<"  "<<b<<endl;
+    t=swap(a,b);
+    cout<<"After swapping:a, b:  "<<a<<"  "<<b<<endl;
+    return 0;
+}
