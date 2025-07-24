@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int fucn(int a)
+{
+    if(a<0)
+        cout<<"-ve"<<endl;
+    else
+        cout<<"+ve"<<endl;
+    return 0;
+}
+int main() {
+    int a,t;
+    cout<<"enter A number"<<endl;
+    cin>>a;
+    t=fucn(a);
+    return 0;
+}
