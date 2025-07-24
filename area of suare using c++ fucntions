@@ -1,0 +1,14 @@
+#include <iostream>
+using namespace std;
+int sarea(int s)
+{
+     return s*s;
+}
+int main() {
+    float s,y;
+    cout<<"enterr the length of a side of the square:"<<endl;
+    cin>>s;
+    y=sarea(s);
+    cout<<y;
+    return 0;
+}
