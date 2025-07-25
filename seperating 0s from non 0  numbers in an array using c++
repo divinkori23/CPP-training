@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    int arr[101], n;
+
+    cout << "Enter number of elements: ";
+    cin >> n;
+
+    cout << "Enter the elements:\n";
+    for (int i = 0; i < n; i++)
+        cin >> arr[i];
+    
+    int j = 0; 
+    for (int i = 0; i < n; i++) {
+        if (arr[i] != 0) {
+            int temp = arr[i];
+            arr[i] = arr[j];
+            arr[j] = temp;
+            j++;
+        }
+    }
+    for (int i = j; i < n + 1; i++)
+        arr[i] = 0;
+    cout << "Output: ";
+    for (int i = 0; i < n ; i++)
+        cout << arr[i] << " ";
+
+    return 0;
+}
