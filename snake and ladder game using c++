@@ -29,17 +29,20 @@ int playTurn(int pos, int player) {
     {
         int dice = rollDice();
         cout << "You rolled: " << dice << endl;
-        if (pos + dice <= 100) 
-        {
-            pos = pos+dice;
-            cout << "Moves to: " << pos << endl;
-            int newPos = checkSnakeOrLadder(pos);
-            if (newPos > pos)
-                    cout << "Climbed to:" << newPos << endl;
-            else
-                    cout << "Snakeeeee!!:" << newPos << endl;
-                pos = newPos;
-        } 
+        if (pos + dice <= 100) {
+    pos = pos + dice;
+    cout << "Moves to: " << pos << endl;
+    int newPos = checkSnakeOrLadder(pos);
+    
+    if (newPos > pos) {
+        cout << "Climbed a ladder to: " << newPos << endl;
+        pos = newPos;
+    } else if (newPos < pos) {
+        cout << "Bitten by a snake! Slid to: " << newPos << endl;
+        pos = newPos;
+    } // else, no change
+}
+ 
         else
         {
             cout << "more than 100. "<< endl;
