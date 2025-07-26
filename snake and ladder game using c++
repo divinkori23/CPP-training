@@ -1,0 +1,87 @@
+#include <iostream>
+#include <limits.h>
+#include <time.h>
+using namespace std;
+
+int checkSnakeOrLadder(int pos) {
+    if (pos == 8) return 22;
+    if (pos == 27) return 53;
+    if (pos == 42) return 68;
+    if (pos == 61) return 91;
+    if (pos == 75) return 95;
+    if (pos == 97) return 17;
+    if (pos == 93) return 33;
+    if (pos == 74) return 44;
+    if (pos == 56) return 26;
+    if (pos == 23) return 8;
+    return pos;
+}
+
+int rollDice() {
+    return rand() % 6 + 1; 
+}
+
+int playTurn(int pos, int player) {
+    char choice;
+    cout << "\nPlayer " << player << ",rool di? (y/n): ";
+    cin >> choice;
+    if (choice == 'y' || choice == 'Y') 
+    {
+        int dice = rollDice();
+        cout << "You rolled: " << dice << endl;
+        if (pos + dice <= 100) 
+        {
+            pos = pos+dice;
+            cout << "Moves to: " << pos << endl;
+            int newPos = checkSnakeOrLadder(pos);
+            if (newPos > pos)
+                    cout << "Climbed to:" << newPos << endl;
+            else
+                    cout << "Snakeeeee!!:" << newPos << endl;
+                pos = newPos;
+        } 
+        else
+        {
+            cout << "more than 100. "<< endl;
+        }
+    } 
+    if (choice == 'n' || choice == 'N')
+    {
+        cout << "Skipped your turn!" << endl;
+    }
+    return pos;
+}
+
+int main() {
+    srand(time(0)); 
+    int p1 = 0, p2 = 0;
+    int turn = 1;
+    while (1) 
+    {
+        if (turn == 1) 
+        {
+            p1 = playTurn(p1, 1);
+            if (p1 == 100) 
+            {
+                cout << "\nPlayer 1 wins \n";
+                break;
+            }
+            turn = 2;
+        } 
+        else
+        {
+            p2 = playTurn(p2, 2);
+            if (p2 == 100) 
+            {
+                cout << "\nPlayer 2 wins\n";
+                break;
+            }
+            turn = 1;
+        }
+    }
+    return 0;
+}
+//if (str[i - 1] == ' ') 
+  //      {
+    //        str[i] = toupper(str[i]);
+      //  }
